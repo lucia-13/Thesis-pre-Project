@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Rotating logo - WebGL experiment</title>
+       <link rel='stylesheet' type='text/css' href="selection.css"></link>  
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.js"></script>
+       <script src="OrbitControls.js"></script>
+      
+    </head>
+
+        <h1>Project Thesis</h1>
+ 
+    
+    
+       <form class="form" id="form" action="CubeVisualization.html" method="GET" >
+
+        <input type="text" id="coverage" list="coverages" class="cat-name typeahead" autocomplete="off">
+        <datalist id="coverages">
+            <option value="AvgLandTemp">
+            <option value="AvgTemperatureColorScaled">
+            <option value="AverageChloroColor">
+            <option value="AverageChloroColorScaled">
+            <option value="AverageChlorophyllScaled">
+            <option value="RadianceColor">
+            <option value="RadianceColorScaled">
+            <option value="climate_cloud">
+            <option value="climate_earth">
+            <option value="meris_lai">
+            <option value="test_irr_cube_2">
+            <option value="visible_human">
+          </datalist>
+        <input type="submit" class="submit-btn" value="Select Coverage" autocomplete="off" onclick="submitForm()">
+        </form>
+         
+    
+          
+          
+            <script>
+                
+       
+                function submitForm(){
+ 
+                    if(typeof(localStorage) != "undefined"){
+                        localStorage.name = document.getElementById("coverage").value;
+                    }
+                    document.getElementById("form").submit();
+                    window.location.href = "CubeVisualization.html";
+                }
+
+
+
+
+            </script>
+</body>
+</html>
